@@ -59,7 +59,9 @@ while bool2
         puts symbol
         puts "Your total amount of #{watchlist[i2]} is $#{(request[i]["lastPrice"].to_i * amount[i2])}"
         port_value << (request[i]["lastPrice"].to_i * amount[i2])
-        puts "your total account value is $#{port_value.sum}" 
+        if i2 == (watchlist.length - 1)
+          puts "your total account value is $#{port_value.sum}" 
+        end
       end
       i2 += 1
       i = 0
